@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -22,6 +20,17 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # Bootstrap gem
 gem 'bootstrap-sass'
+
+# Use sqlite3 as the database for Active Record
+group :development, :test do
+	gem 'sqlite3'
+end
+
+group :production, do
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
