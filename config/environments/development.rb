@@ -22,6 +22,8 @@ Rails.application.configure do
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
+Paperclip.options[:command_path] = 'C:/Program Files (x86)/ImageMagick-6.9.3-Q16'
+
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
