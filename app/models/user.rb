@@ -10,4 +10,5 @@ validates :password, :presence => true,
 
 has_many :pins
 
+validates :name, presence: true
 end
